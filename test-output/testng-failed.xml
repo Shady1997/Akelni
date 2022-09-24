@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Akelni Mobile Application using Appium]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test Signup Method using Facebook(failed)">
+    <classes>
+      <class name="test_cases.E2E_TestCase002_SignUpWithFacebook">
+        <methods>
+          <include name="testSignUpWithFacebook"/>
+          <include name="TearDown"/>
+          <include name="prepare"/>
+        </methods>
+      </class> <!-- test_cases.E2E_TestCase002_SignUpWithFacebook -->
+    </classes>
+  </test> <!-- Test Signup Method using Facebook(failed) -->
+</suite> <!-- Failed suite [Test Akelni Mobile Application using Appium] -->

@@ -1,23 +1,22 @@
 package test_cases;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import org.openqa.selenium.JavascriptExecutor;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-
 import capabilities.Capabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import pages.HomePage;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import pages.SignuUpPage;
 import pages.PageBase;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class TestBase extends Capabilities{
 
 	// declare class properties
 	static AndroidDriver<AndroidElement> driver;
-	static HomePage mainPage;
+	static SignuUpPage mainPage;
 	protected static String result = null;
 	FileInputStream readProperty;
 	JavascriptExecutor js;
@@ -28,7 +27,7 @@ public class TestBase extends Capabilities{
 		driver = baseCapabilities("AppName");
 		PageBase.captureScreenshot(driver, "startApp");// take screenshot for app when start
 
-		mainPage = new HomePage(driver);
+		mainPage = new SignuUpPage(driver);
 	}
 
 	@AfterClass
@@ -37,7 +36,7 @@ public class TestBase extends Capabilities{
 	}
 
 	public static void getScreenshotOnFailure() {
-		PageBase.captureScreenshot(driver, "fail" + java.time.LocalTime.now());
+		PageBase.captureScreenshot(driver, "fail" + java.time.LocalTime.now().toString());
 	}
 
 }

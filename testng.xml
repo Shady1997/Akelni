@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<test thread-count="5" name="Simple Mobile Automation End2End">
+<suite name="Test Akelni Mobile Application using Appium">
+	<test thread-count="5" name="Test Signup Method using Mobile Number">
 		<classes>
-			<class name="test_cases.TestBase" />
+			<class name="test_cases.E2E_TestCase001_SignUpWithMobileNumber" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Test Signup Method using Facebook">
+		<classes>
+			<class name="test_cases.E2E_TestCase002_SignUpWithFacebook" />
 		</classes>
 	</test>
 </suite>
